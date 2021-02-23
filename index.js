@@ -32,13 +32,17 @@ console.log(
   
   1. What is the difference between counter1 and counter2?
   
+  -Counter2 is reaching outside of the function to pull a variable while counter1 is declaring the variable inside the function.
 
   2. Which of the two uses a closure? How can you tell?
   
+  -Counter1. You can tell because the child of counterMaker is pulling a variable from outside of it's function. 
 
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
      
+  -Counter1 would be preferable for a function that needed specific variables that would not be needed later. Counter2 would be preferable for reusing a variable in other functions later on. 
+
 */
 
 // counter1 code
@@ -67,8 +71,8 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/) {
-  /*Code Here*/
+function inning() {
+  return Math.floor(Math.random() * 3);
 }
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
@@ -85,9 +89,7 @@ Use the finalScore function below to do the following:
 }
 */
 
-function finalScore(/*code Here*/) {
-  /*Code Here*/
-}
+function finalScore(callback, innings) {}
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
